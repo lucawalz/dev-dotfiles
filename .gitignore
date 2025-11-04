@@ -1,0 +1,88 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Neovim
+nvim/lazy-lock.json
+nvim/.luarc.json
+*.log
+
+# Powerlevel10k
+.p10k.zsh
+
+# Shell history and cache
+*_history
+.zsh_history
+.zhistory
+.zcompdump*
+.cache/
+
+# Secrets and sensitive files
+.env
+.env.*
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+*.asc
+*.gpg
+*_rsa
+*_dsa
+*_ecdsa
+*_ed25519
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+*.age
+age/
+sops/
+.config/sops/
+.secrets/
+secrets.*
+*.secret
+*.secrets
+
+# Credentials
+credentials
+.credentials
+*credentials*
+*password*
+*token*
+auth.json
+.netrc
+.authinfo
+
+# AWS
+.aws/
+aws_*
+
+# API Keys patterns
+*api_key*
+*apikey*
+*api-key*
+*.apikey
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Private configurations
+*private*
+*local*
+.local/
+
+# Backup files
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+
+# Project-specific
+IdeaProjects/
+agenix/

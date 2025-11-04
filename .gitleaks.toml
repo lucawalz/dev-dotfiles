@@ -1,0 +1,31 @@
+title = "Dotfiles Gitleaks Config"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "age-secret-key"
+description = "Age secret key"
+regex = '''AGE-SECRET-KEY-1[A-Z0-9]{58}'''
+
+[[rules]]
+id = "sops-key"
+description = "SOPS encryption key"
+regex = '''sops_[a-z0-9_]*.*=.*[A-Za-z0-9+/]{20,}'''
+
+[[rules]]
+id = "ssh-private-key"
+description = "SSH private key"
+regex = '''-----BEGIN (RSA|DSA|EC|OPENSSH) PRIVATE KEY-----'''
+
+[[rules]]
+id = "api-key-generic"
+description = "Generic API key"
+regex = '''(?i)(api[_-]?key|apikey)['":\s]*[=:]\s*['"][a-zA-Z0-9]{16,}['"]'''
+
+[allowlist]
+description = "Allowlist for false positives"
+paths = [
+  '''\.md$''',  # Markdown files (documentation)
+  '''README''',
+]
